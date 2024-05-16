@@ -21,4 +21,5 @@ I found Debye's work concerned with these formulae in Iwanami sugaku jiten 4th e
 
 ![1](https://github.com/chibaf/about_formulae_of_bessel_functions_in_Abramowitz_and_Stegun/assets/1296728/96c1f30c-d402-46b4-930d-c7e17fcbdfed)
 
+P. Debye, 
 Naeherungsformen fuer Zylinderfunkutionen fuer grrosse werte des Arguments und mbeschraenkt veraederliche werte des Index, Math Ann 67, 535--558 (1909)
