@@ -1,6 +1,8 @@
 # about_formulae_of_bessel_functions_in_Abramowitz_and_Stegun
 about_formulae_of_bessel_functions_in_Abramowitz_and_Stegun
 
+Abramowitz_and_Stegun shows the following formulae
+
 asymptotic expansions for bessel functions by order
 
 $$
