@@ -17,7 +17,7 @@ $$
 
 Abramowitz_and_Stegun doesn't note about references of the above formulae
 
-I found Debye's work concerned with these formulae in Iwanami sugaku jiten 4th edition (iwanami mathematical dictionary 4th edition)
+I found Debye's work concerned with these formulae in Iwanami sugaku jiten 4th edition (iwanami mathematical dictionary 4th edition) in Japanese
 
 ![1](https://github.com/chibaf/about_formulae_of_bessel_functions_in_Abramowitz_and_Stegun/assets/1296728/96c1f30c-d402-46b4-930d-c7e17fcbdfed)
 
