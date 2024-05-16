@@ -57,7 +57,11 @@ we have for a fixed $x>0$
 
 $$
 %\begin{eqnarray*}
-e^{-\mathrm{i}x(\sin\tau_0-\tau_0\cos\tau_0)}=\exp\left\{-\alpha\sqrt{1-\left(\frac{x}{\alpha}\right)^2}+\alpha\log\left(\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right)\right\} 
+e^{-\mathrm{i}x(\sin\tau_0-\tau_0\cos\tau_0)}=
+$$
+
+$$
+\exp\left\{-\alpha\sqrt{1-\left(\frac{x}{\alpha}\right)^2}+\alpha\log\left(\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right)\right\} 
 $$
 
 $$
