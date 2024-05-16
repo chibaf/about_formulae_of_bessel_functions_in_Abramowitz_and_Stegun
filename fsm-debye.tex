@@ -1,0 +1,773 @@
+\chapter{A fundamental solution method (FSM) for Helmholtz problem in the exterior region of a disc}
+\label{chapter fsm}
+
+\section{A reduced wave problem and its FSM approximation}
+\label{fsm}
+\subsection{A reduced wave problem with Dirichlet boundary condition in the exterior region of a disc}
+Let $\Gamma_a$ be the circle in the plane $\Rset^2$ with radius $a$ having the origin of the plane as its center. Let $k$ be the length of the wave number vector considered. Let $\Omega_e$ be the exterior domain of the circle $\Gamma_a$. We use the notation $\bfvec{r}=\bfvec{r}(\theta)$ for the point in the plane corresponding to the complex number $r \e^{\mathrm{i}\theta}$ with $r=|\bfvec{r}|$, where $|\bfvec{r}|$ is the Euclidean norm of $\bfvec{r}\in\Rset^2$. Similarly we use $\bfvec{a}=\bfvec{a}(\theta)$, and $\bfvec{\rho}=\bfvec{\rho}(\theta)$, corresponding to $a \e^{\mathrm{i}\theta}$ with $a=|\bfvec{a}|$, and to $\rho \e^{\mathrm{i}\theta}$ with $\rho=|\bfvec{\rho}|$, respectively.
+Rellich\cite{Rellich},\cite{Sommerfeld} shows the uniqueness of solution under the radiation condition. %(See Chapter \ref{uniqueness}.) 
+
+We consider the following inhomogeneous Dirichlet boundary value problem of the reduced wave equation in the region $\Omega_e$ as our continuous problem ${\rm (E_f)}$:
+\begin{eqnarray*}
+{\rm (E_f)}
+\left\{
+\begin{array}{r}
+\displaystyle -\Delta u -k^2 u = 0 \quad {\rm in} \; \Omega_e,\\
+\displaystyle u=f \quad {\rm on} \; \Gamma_a, \\
+\displaystyle \lim_{r \rightarrow \infty} \sqrt{r} \left\{\frac{\partial u}{\partial r}- \mathrm{i} k u \right\}=0.
+\end{array}
+\right.
+\end{eqnarray*}
+Namely the solution $u=u(\bfvec{r})$ is assumed to satisfy the Sommerfeld outgoing radiation condition at infinity. The boundary data $f=f(\bfvec{a}(\theta))$ is a complex valued continuous function on $\Gamma_a$.
+
+Let $f_n$ be the Fourier coefficient defined through
+\begin{displaymath}
+f_n=\frac{1}{2\pi}\int^{2\pi}_{0}f(\bfvec{a}(\theta))\e^{-\mathrm{i} n \theta}\d\theta \quad {\rm for}\;n\in\Zset.
+\end{displaymath}
+Then the solution $u(\bfvec{r})$ is formally represented through the following formula (\ref{exactsol}):
+\begin{equation}
+\displaystyle u(\bfvec{r})=\sum^{\infty}_{n=-\infty} f_n \frac{H^{(1)}_n(k r)}{H^{(1)}_n(k a)}\e^{\mathrm{i} n \theta} \quad {\rm for}\;r \ge a.
+\label{exactsol}
+\end{equation}
+In the above formula (\ref{exactsol}), $H^{(1)}_n(x)$ is the nth order Hankel function of the first kind.
+\begin{note}
+It should be noted that, under certain decaying condition on the Fourier coefficient $f_n$ as $|n|$ tends to infinity, the infinite differentiability of $u$ defined by (\ref{exactsol}) with respect to $r$, $r>a$, and $\theta\in\Rset$, and the continuity of all derivatives of $u$ up to $r\ge a$ may be established, which in turn implies that the function $u$ defined by (\ref{exactsol}) is the unique classical solution of the problem ${\rm (E_f)}$. One of such decaying condition is the following exponentially decaying condition ({\boldmath $\beta$}).
+\begin{eqnarray*}
+({\mbox {\boldmath $\beta$}})
+\left\{
+\begin{array}{l}
+{\rm There}\;{\rm are}\;{\rm positive}\;{\rm constants}\;F\;{\rm and}\;\beta\in(0,1)\;{\rm such}\;{\rm that}\\
+|f_n| \le F\beta^{|n|}\quad {\rm for}\;n\in\Zset. 
+\end{array}
+\right.
+\end{eqnarray*}
+\end{note}
+
+\subsection{Approximate problems to the reduced wave  problem through a fundamental solution method}
+\label{FSM}
+Let $N$ be an arbitrary fixed positive integer. Then we use the notation $\theta_j$ for $j\in\Zset$ through 
+\begin{displaymath}
+\theta_1=\frac{2\pi}{N}, \quad \theta_j=j\theta_1 \quad {\rm for}\;j\in\Zset.
+\end{displaymath}
+For fixed positive numbers $\rho$ and $a$ such that $0 < \rho < a$, $\bfvec{\rho}_j$ and $\bfvec{a}_j$ are defined as follows.
+\begin{displaymath}
+\bfvec{\rho}_j=\bfvec{\rho}(\theta_j), \quad \bfvec{a}_j=\bfvec{a}(\theta_j), \quad 0\le j \le N-1.
+\end{displaymath} 
+The points $\bfvec{\rho}_j$ and $\bfvec{a}_j$ are said to be the source and the collocation points, respectively. The arrangement of the set of source points and collocation points introduced above is called the equi-distant equally phased arrangement of source points and collocation points in this paper.
+
+Now we introduce an approximate problem ${\rm (E^{(N)}_f)}$ to ${\rm (E_f)}$ through a fundamental solution method, FSM, in the setting of the equi-distant equally phased arrangement of source points and collocation points. Namely we consider the following problem:  
+\begin{eqnarray*}
+{\rm (E^{(N)}_f)}
+\left\{
+\begin{array}{l}
+\displaystyle u^{(N)}(\bfvec{r})=\sum^{N-1}_{j=0} Q_j G_j(\bfvec{r}),\\
+\displaystyle u^{(N)}(\bfvec{a}_j)=f(\bfvec{a}_j), \quad 0 \leq j \leq N-1.
+\end{array}
+\right.
+\nonumber
+%\label{fsm-prblm}
+\end{eqnarray*}
+In the problem ${\rm (E^{(N)}_f)}$, we use basis functions $G_j({\bfvec{r}})$ as follows, 
+\begin{displaymath}
+G_j({\bfvec{r}}) = H_0^{(1)}(k|r\e^{\mathrm{i}{\theta}}- \rho \e^{\mathrm{i}{\theta}_j}|) ,
+\quad 0 \leq j \leq N-1.
+%\label{basis function}
+\end{displaymath}
+It is noted that $G_j({\bfvec{r}})$ is a constant multiple of the fundamental solution of Helmholtz equation with the singularity at $\bfvec{r}=\bfvec{\rho}_j$ satisfying the Sommerfeld outgoing radiation condition at infinity. The problem ${\rm (E^{(N)}_f)}$ is understood that the unknown $N$ quantities $Q_j, 0\le j \le N-1$, should be determined by the collocation condition described as the second equation of ${\rm (E^{(N)}_f)}$.
+
+Hereafter the following notation is employed:
+\begin{displaymath}
+\gamma = \frac{\rho}{a}, \quad 
+\delta = \frac{r}{a}, \quad 
+\kappa = ka.
+%\label{chara-num}
+\end{displaymath}
+These numbers are characteristic numbers of the relevant problem, normalized by the radius $a$.
+Using this notation we can rewrite the basis function $G_j({\bfvec{r}})$ as follows.
+\begin{displaymath}
+G_j({\bfvec{r}}) = H_0^{(1)}(\kappa|\delta- \gamma \e^{-\mathrm{i}(\theta -{\theta}_j)}|) ,
+\quad 0 \leq j \leq N-1.
+%\label{basis function 2}
+\end{displaymath}
+
+\section{Solvability of the FSM approximate problems}
+\label{solvability}
+For a fixed real number $\kappa>0$ and a fixed real number $\gamma\in(0,1)$, let us define the kernel function $g(\theta)$ through 
+\begin{displaymath}
+g(\theta)=H^{(1)}_0(\kappa | 1 - \gamma \e^{-\mathrm{i}\theta} | ).
+%\label{g(th)}
+\end{displaymath}
+We understand that the problem ${\rm (E_f)}$ is to find a density function $q(\theta)$ satisfying the following equality $({\bf E_f})$:
+$$
+f(\bfvec{a}(\theta))=\frac{1}{2\pi}\int^{2\pi}_0 g(\theta-\varphi)q(\varphi)\d\varphi.
+\leqno{({\bf E_f})}
+$$
+Namely the function $f(\bfvec{a}(\theta))$ is represented with the kernel function $g(\theta)$ through the formula of convolution $({\bf E_f})$. It is to be noted that we have 
+\begin{displaymath}
+G_j(\bfvec{a}(\theta))=g(\theta-\theta_j), \quad 0 \le j \le N-1.
+\end{displaymath}
+Hence we may consider the problem $({\rm E^{(N)}_f})$ is an approximate problem of the integral equation $({\bf E_f})$. Unknown quantities $Q_j,0\le j \le N-1$ in ${\rm (E_f^{(N)})}$ should be considered as approximate values of $\frac{1}{N}q(\theta_j),0\le j \le N-1$.
+
+Define a circulant matrix $G$ and an inhomogeneous vector $\bfvec{f}$, and an unknown vector $\bfvec{q}$ as follows.
+\begin{eqnarray*}
+\begin{array}{l}
+\displaystyle G_{ij} =\left(g(\theta_{i-j})\right)_{0\le i,j \le N-1}, \quad
+ \bfvec{f} =(f(\bfvec{a}_i))_{0\le i \le N-1}, \quad
+\displaystyle \bfvec{q} =(Q_i)_{0\le i \le N-1}.
+ \end{array}
+%\label{Gij}
+\end{eqnarray*}
+Then the problem ${\rm (E^{(N)}_f)}$ is equivalent to solve the linear equation:
+\begin{equation}
+G\bfvec{q}=\bfvec{f}. 
+\label{Gq=f}
+\end{equation}
+Let $\omega=\e^{\mathrm{i}\theta_1}$, and introduce vectors $\bfvec{\omega}_n$ for $n\in\Zset$ with ${\bfvec{\omega}_n}=(\omega^{jn})_{0\le j \le N-1}$. Since $G$ is circulant, vectors $\bfvec{\omega}_n$ are eigenvectors of $G$. Denote the eigenvalue of $G$ corresponding to $\bfvec{\omega}_n$ by $\lambda_n$ for $n\in\Zset$. Let $F^{(N)}_n$, and $G^{(N)}_n$, be the discrete Fourier coefficients of $f(\bfvec{a}(\theta))$, and $g(\theta)$, for $n\in\Zset$, defined through
+\begin{equation}
+\label{GnFn}
+\displaystyle {F}^{(N)}_n=\frac{1}{N}\sum^{N-1}_{j=0} f(\bfvec{a}_j) \e^{-\mathrm{i} n \theta_j} \quad{\rm and}\quad G^{(N)}_n=\frac{1}{N}\sum^{N-1}_{j=0} g(\theta_j) \e^{-\mathrm{i} n \theta_j},
+\end{equation}
+respectively. Although $F^{(N)}_n$ and $G^{(N)}_n$ should be called discrete Fourier coefficients with size $N$, we drop the phrase of ``with size $N$" here and hereafter. By definition it follows that discrete Fourier coefficients $F^{(N)}_n$ and $G^{(N)}_n$ have the period $N$ with respect to the suffix $n$. And an elemental calculation yields the relation:
+\begin{displaymath}
+\lambda_n=N G^{(N)}_n \quad {\rm for}\;n\in\Zset.
+\end{displaymath}
+Hence a unique solvability condition of ${\rm (E^{(N)}_f)}$ is represented as follows.
+$$
+\leqno ({\bf G^{(N)}}) \quad
+G^{(N)}_n \ne 0 \quad {\rm for}\;n\in \Zset.
+$$
+Under the condition $({\bf G^{(N)}})$ we can express the solution $\bfvec{q}$ of (\ref{Gq=f}) as follows.
+\begin{equation}
+\displaystyle Q_n=\frac{1}{N}\sum^{N-1}_{j=0} \frac{F^{(N)}_j}{G^{(N)}_j} \e^{\mathrm{i} n \theta_j}, \quad 0 \le n \le N-1.
+\label{qn}
+\end{equation}
+
+Due to Graf's addition formula in p. 361 of Watson \cite{Watson1966}, we have the Fourier series expansion of $g(\theta)$ as follows.
+\begin{displaymath}
+g(\theta)=\sum^{\infty}_{n=-\infty} g_n \e^{\mathrm{i} n \theta},
+%\label{g1}
+\end{displaymath}
+with
+\begin{equation}
+g_n=H^{(1)}_n(\kappa) J_n(\gamma \kappa) \quad {\rm for} \; n \in \Zset.
+\label{g3}
+\end{equation}
+
+Now we introduce the condition $({\bf g})$ on the kernel function $g(\theta)$ through
+$$
+\leqno ({\bf g}) \quad 
+ g_n \ne 0 \quad {\rm for}\;n\in \Zset.
+$$
+This condition $({\bf g})$ has been denoted by $({\bf G1})$ in our previous paper \cite{ushijima-chiba1}, in which we have shown the following theorem as Theorem 3.
+\begin{thm}
+\label{th1}
+Let $\kappa$ be an arbitrary positive number, and let $\gamma \in (0,1)$ be fixed. Suppose that the kernel function $g(\theta)$ with the parameters $\kappa$ and $\gamma$ satisfies the condition ${\bf (g)}$. Then there is a positive integer $N_1$ depending on $\kappa$ and $\gamma$ such that the condition ${\bf (G^{(N)})}$ holds for any $N\ge N_1$. 
+\end{thm}
+
+Since $H^{(1)}_n(\kappa)$ never vanishes for any $\kappa>0$ as will be shown in the proof of Proposition \ref{eprop1} in Section \ref{partition}, the condition $({\bf g})$ is equivalent to the condition that the nth order Bessel function $J_n(x)$ never vanishes at $x=\gamma\kappa$ for any positive integer $n$. From the properties of zeros of Bessel functions, we can conclude the following: \\
+{\it For fixed $\kappa$, except for the finite number of values of $\gamma\in(0,1)$ depending on $\kappa$, the condition $({\bf g})$ holds for any remaining $\gamma\in(0,1)$. Especially if $\kappa$ is less than or equal to the smallest positive zero of $J_0(x)$, the condition $({\bf g})$ holds for any $\gamma\in(0,1)$.}
+
+
+\section{Main theorem}
+\label{main}
+We assume the following Assumptions \ref{assump1} and \ref{assump2} throughout this section and the consecutive sections.
+\begin{assum}
+\label{assump1}
+Let $\kappa$ be fixed as an arbitrary positive number. Choose $\gamma \in (0,1)$ appropriately so that the kernel function $g(\theta)$ with parameters $\kappa$ and $\gamma$ may satisfy the condition $({\bf g})$.
+\end{assum}
+\begin{assum}
+\label{assump2}
+Let $f_n$ and $g_n$ be Fourier coefficients of $f(\bfvec{a}(\theta))$ and $g(\theta)$ for $n \in \Zset$ defined through 
+\begin{displaymath}
+f_n=\frac{1}{2\pi}\int^{2\pi}_0 f(\bfvec{a}(\theta))\e^{-\mathrm{i}n\theta}\d\theta \quad{\rm and}\quad
+g_n=\frac{1}{2\pi}\int^{2\pi}_0 g(\theta)\e^{-\mathrm{i}n\theta}\d\theta,
+\end{displaymath}
+respectively. Under Assumption \ref{assump1}, define quantities $q_n$ for $n \in \Zset$ through
+\begin{displaymath}
+q_n=\frac{f_n}{g_n}.
+\end{displaymath}
+Suppose that the following quantity $|||q|||$ is finite for the Dirichlet data $f$ of the Problem ${\rm (E_f)}$.
+\begin{displaymath}
+|||q|||=\sup_{n\in\Zset}|q_n|.
+\end{displaymath}
+\end{assum}
+
+\begin{thm}
+\label{main theorem}
+Under Assumptions \ref{assump1} and \ref{assump2}, there is a positive integer $N_2$ such that the following estimate is valid:
+\begin{displaymath}
+\displaystyle \sup_{|\bfvec{r}| \ge a} \left|u(\bfvec{r})-u^{(N)}(\bfvec{r})\right| < \displaystyle \frac{900|||q|||}{\pi(1-\gamma)}\frac{\gamma^{N/2}}{N} \quad {\rm for}\;N \ge N_2.
+%\label{main result}
+\end{displaymath}
+The positive integer $N_2$ depends on $\kappa$ and $\gamma$, but does not depend on the Dirichlet data $f$.
+\end{thm}
+
+
+\section{A Fourier series expansion of the approximation error}
+\label{fourier-expansion}
+Throughout Sections from \ref{fourier-expansion} to \ref{proof}, the symbol $N$ means a generic positive integer satisfying
+\begin{displaymath}
+N \ge \max(N_1,2),
+\end{displaymath}
+where $N_1$ is a positive integer determined in Theorem \ref{th1}.
+
+\begin{thm}
+\label{f-expansion}
+The solution $u^{(N)}(\bfvec{r})$ of ${\rm (E^{(N)}_f)}$ is represented as follows.
+\begin{equation}
+u^{(N)}(\bfvec{r})=\sum^{\infty}_{n=-\infty}\frac{F^{(N)}_n}{G^{(N)}_n}g_n \frac{H^{(1)}_n(\delta\kappa)}{H^{(1)}_n(\kappa)}\e^{\mathrm{i}n\theta}.
+\label{fsm-fexp0}
+\end{equation}
+\end{thm}
+\begin{pf}
+For an arbitrarily fixed $r\ge a$, the basis function $G_j(\bfvec{r}),0 \le j \le N-1,$ is expanded to the following Fourier series with respect to $\theta$ due to Graf's addition formula (See Watson \cite{Watson1966} p. 361),
+\begin{equation}
+G_j(\bfvec{r})=\sum^{\infty}_{n=-\infty}  H^{(1)}_n(\kappa \delta) J_n(\gamma \kappa)\e^{\mathrm{i} n (\theta-\theta_j)} \quad {\rm for}\; \bfvec{r}=\bfvec{r}(\theta) \;{\rm with}\;|\bfvec{r}|=r.
+\label{ser of basis f}
+\end{equation}
+Inserting the series above into the formula of $u^{(N)}(\bfvec{r})$ in $({\rm E_f^{(N)}})$, we obtain
+\begin{equation}
+u^{(N)}(\bfvec{r})=\displaystyle \sum^{N-1}_{j=0} Q_j \left\{\sum^{\infty}_{n=-\infty}  H^{(1)}_n(\kappa \delta) J_n(\gamma \kappa)\e^{\mathrm{i} n (\theta-\theta_j)}\right\}.
+\label{series}
+\end{equation}
+Since the series (\ref{ser of basis f}) is absolutely and uniformly convergent with respect to $\theta$, we have
+\begin{eqnarray*}
+u^{(N)}(\bfvec{r})=\displaystyle \sum^{\infty}_{n=-\infty} \left\{\sum^{N-1}_{j=0} Q_j \e^{-\mathrm{i} n \theta_j}\right\} H^{(1)}_n(\kappa) J_n(\gamma \kappa) \frac{H^{(1)}_n(\kappa \delta)}{H^{(1)}_n(\kappa)}\e^{\mathrm{i} n \theta}.% \\
+\end{eqnarray*}
+(The absolute and uniform convergency of (\ref{ser of basis f}) will be admitted after one sees Proposition \ref{eprop1} and the proof of Proposition \ref{eprop2} in Section \ref{partition}.)
+The representation formula (\ref{qn}) of $Q_n$ yields
+\begin{equation}
+\sum^{N-1}_{j=0} Q_j \e^{-\mathrm{i} n \theta_j}=\frac{F^{(N)}_n}{G^{(N)}_n} \quad {\rm for}\; n \in \Zset.
+\label{qn2}
+\end{equation}
+Due to (\ref{qn2}) and (\ref{g3}), the statement of the theorem is obtained.\qed
+\end{pf}
+
+The approximation error, namely the difference between the exact solution (\ref{exactsol}) and the FSM approximate one (\ref{fsm-fexp0}) is given as follows.
+\begin{equation}
+\label{difference}
+\displaystyle u(\bfvec{r})-u^{(N)}(\bfvec{r})=\sum^{\infty}_{n=-\infty} \left(\frac{f_n}{g_n}-\frac{F^{(N)}_n}{G^{(N)}_n}\right)g_n \,\frac{H^{(1)}_n(\kappa \delta)}{H^{(1)}_n(\kappa)}\,\e^{\mathrm{i} n \theta}.
+\end{equation}
+
+\section{Estimates of quantities appearing in the Fourier series expansion of the approximation error}
+\label{partition}
+
+\begin{prop}
+\label{eprop1} We have
+\begin{displaymath}
+0<\left|\frac{H^{(1)}_n(\kappa \delta)}{H^{(1)}_n(\kappa)}\right| \le 1 \quad {\rm for}\; \kappa>0,\;\delta \ge 1 \;{\rm and}\; n \in \Zset.
+\end{displaymath}
+\end{prop}
+\begin{pf}
+Let $x$ be a positive real variable, and let $Y_n(x)$ be the nth order Neumann function. The nth order Hankel function of the first kind $H^{(1)}_n(x)$ is represented as follows.
+\begin{displaymath}
+H^{(1)}_n(x) = J_n(x) + \mathrm{i} Y_n(x) \quad {\rm for}\; x>0 \;{\rm and}\; n \in \Zset.
+\end{displaymath}
+Using Nicholson's integral in p. 444 of Watson \cite{Watson1966}, we introduce the function $P_n(x)$ as follows.
+\begin{eqnarray*}
+\displaystyle P_n(x)=|H^{(1)}_n(x)|^2=J^2_n(x)+Y^2_n(x)&=&\displaystyle \frac{8}{\pi^2}\int^{\infty}_{0} K_0(2x \sinh t)\cosh 2 n t \, \d{t} \\
+&&  {\rm for}\;x>0 \;{\rm and}\; n \in \Zset,
+%\label{J2Y2}
+\end{eqnarray*}
+with
+\begin{displaymath}
+\displaystyle K_0(x)=\int^{\infty}_0 \e^{-x \cosh t} \, \d{t} \quad {\rm for}\; x>0,
+\end{displaymath}
+where $K_0(x)$ is the zeroth order modified Bessel function of the second kind (see p. 446 of Watson \cite{Watson1966}).
+The formula above indicates that $P_n(x)$ is a positive decreasing function of $x>0$. Namely we have
+\begin{displaymath}
+0<P_n(\delta \kappa) \le P_n(\kappa) \quad {\rm for}\;\delta \ge 1,\;\kappa>0 \;{\rm and}\; n\in\Zset.
+\end{displaymath}
+Thus the following estimate is obtained.
+\begin{displaymath}
+0<\frac{P_n(\delta \kappa)}{P_n(\kappa)}=\frac{|H^{(1)}_n(\delta \kappa)|^2}{|H^{(1)}_n(\kappa)|^2}=\left|\frac{H^{(1)}_n(\kappa \delta)}{H^{(1)}_n(\kappa)}\right|^2 \le 1 \quad {\rm for}\;\delta \ge 1,\;\kappa>0 \;{\rm and}\; n\in\Zset.
+\end{displaymath}
+Therefore, the statement of the proposition is obtained.\qed
+\end{pf}
+
+\begin{prop}
+\label{eprop2}
+There exists a positive integer $L$, depending on $\kappa$ and $\gamma$, such that
+\begin{displaymath}
+|g_n| \le \frac{3}{2 |n|\pi}\gamma^{|n|} \quad {\rm provided}\;{\rm that}\;|n| \ge L.
+%\label{est-gn}
+\end{displaymath}
+\end{prop}
+\begin{pf}
+This statement comes from Lemma 1 of Ushijima and Chiba \cite{ushijima-chiba1}. Key steps of the proof are rewritten here for the sake of convenience. The following asymptotic estimates are written on p. 365 of Abramowitz-Stegun\cite{Abramowitz-Stegun}, which are valid for a fixed positive $x$ as $n \rightarrow \infty$. % and Bowman-Senior-Uslenghi\cite{Bowman-Senior-Uslenghi}
+\begin{equation}
+J_n(x) \sim \frac{1}{\sqrt{2\pi n}}\left(\frac{\e x}{2 n}\right)^n, \quad H_n^{(1)}(x) \sim -\mathrm{i} \sqrt{\frac{2}{\pi n}}\left(\frac{\e x}{2 n}\right)^{-n}.
+\label{Abramowitz-Stegun formula 1}
+\end{equation}
+Then the asymptotic estimate below holds for fixed positive $\gamma$ and $\kappa$ as $n \rightarrow \infty$.
+\begin{displaymath}
+g_n=H_n^{(1)}(\kappa)J_n(\gamma\kappa) \sim - \frac{\mathrm{i} \gamma^n}{\pi n}.
+\end{displaymath}
+As in Lemma 1 of \cite{ushijima-chiba1}, we understand that the above asymptotic behaviour is equivalent to the following statement:\\
+{\it For any positive $\epsilon$, there exists a positive integer $L(\epsilon)$ such that}
+\begin{displaymath}
+\left|\frac{g_n}{- \frac{\mathrm{i} \gamma^n}{\pi n}} -1\right| \le \epsilon \quad {\rm for }\;n \ge L(\epsilon). 
+\end{displaymath}
+Let $L=L(1/2)$. Then we have
+\begin{displaymath}
+\left|\frac{g_n}{- \frac{\mathrm{i} \gamma^n}{\pi n}} -1\right| \le \frac{1}{2} \quad {\rm for }\;n \ge L. 
+%\label{gn/gamma^n/n}
+\end{displaymath}
+Hence the following inequality holds.
+\begin{displaymath}
+|g_n| \le \frac{3}{2 n \pi}\gamma^{n} \quad {\rm for}\; n \ge L.
+\end{displaymath}
+On the other hand the following formulas hold.
+\begin{equation}
+\label{negative suffix}
+J_{-n}(x)=(-1)^n J_n(x) \quad {\rm and} \quad H^{(1)}_{-n}(x)=(-1)^n H^{(1)}_n(x)\quad {\rm for}\;n \in \Zset. 
+\end{equation}
+Hence $g_{-n}=g_n$ for $n\in\Zset$. Thus the result of Proposition \ref{eprop2} is obtained.\qed
+\end{pf}
+
+\begin{rem}
+\label{Debye formula}
+Using Debye's contour, Debye shows the following asymptotic expansions (\ref{debye-formula: Hankel}) and (\ref{debye-formula: Bessel}) of order $\alpha$ for $H^{(2)}_{\alpha}(x)$ and $J_\alpha(x)$ from their integral representations\cite{Debye},\cite{Olver1997},\cite{Watson1966}, where $\alpha>x>0$ and $H^{(2)}_{\alpha}(x)$ is the $\alpha$th order Hankel function of the second kind. Watson gives an explanation on Debye's contour in his book\cite{Watson1966}.
+\begin{eqnarray}
+H^{(2)}_{\alpha}(x)&\sim&\frac{\mathrm{i}}{\pi}\e^{-\mathrm{i}x(\sin\tau_0-\tau_0\cos\tau_0)}\left[\frac{\Gamma(\frac{1}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{1}{2}}}-\left(\frac{1}{8}+\frac{5}{24}\cot^2\tau_0\right)\frac{\Gamma(\frac{3}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{3}{2}}}\right. \nonumber\\
+&&\left.+\left(\frac{3}{128}+\frac{7}{576}\cot^2\tau_0+\frac{385}{3456}\cot^4\tau_0\right)\frac{\Gamma(\frac{5}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{5}{2}}}+\cdots\right],
+\label{debye-formula: Hankel}
+\end{eqnarray}
+where $\tau_0$ is a saddle point and defined through
+\begin{equation}
+\tau_0=-\mathrm{i}\log\left(\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right).
+\label{tau_0}
+\end{equation}
+Since 
+\begin{displaymath}
+\cos\tau_0=\frac{\alpha}{x}, \quad \sin\tau_0=-\mathrm{i}\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2},
+\end{displaymath}
+we have for a fixed $x>0$
+\begin{eqnarray*}
+\e^{-\mathrm{i}x(\sin\tau_0-\tau_0\cos\tau_0)}&=&\exp\left\{-\alpha\sqrt{1-\left(\frac{x}{\alpha}\right)^2}+\alpha\log\left(\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right)\right\} \\
+&=&\exp\left(-\alpha\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right) \times \left(\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right)^\alpha \\
+&\sim& \e^{-\alpha} \times \left(\frac{2\alpha}{x}\right)^\alpha=\left(\frac{2\alpha}{\e x}\right)^\alpha \quad {\rm as}\;\alpha\rightarrow\infty.
+\end{eqnarray*}
+On the other hand, the following formulae hold for a fixed $x>0$.
+\begin{displaymath}
+\Gamma\left(\frac{1}{2}\right)=\sqrt{\pi} \quad {\rm and} \quad \left(\mathrm{i}\frac{x}{2}\sin\tau_0\right)^{1/2} \sim \sqrt{\frac{\alpha}{2}}\quad {\rm as}\;\alpha\rightarrow\infty.
+\end{displaymath}
+Then the first term of (\ref{debye-formula: Hankel}) is asymptotically equal to
+\begin{displaymath}
+\mathrm{i}\sqrt{\frac{2}{\pi\alpha}}\left(\frac{2\alpha}{\e x}\right)^\alpha.
+\end{displaymath}
+Hence we have
+\begin{displaymath}
+H^{(2)}_\alpha(x) \sim \mathrm{i}\sqrt{\frac{2}{\pi\alpha}}\left(\frac{2\alpha}{\e x}\right)^\alpha \quad {\rm as}\;\alpha\rightarrow\infty.
+\end{displaymath}
+
+In the same manner as this discussion, from the following Debye's formula\cite{Debye} we have the asymptotic expansion of $J_\alpha(x)$ for a fixed positive number $x$ as $\alpha\rightarrow\infty$.
+\begin{eqnarray}
+J_{\alpha}(x)&\sim&\frac{\mathrm{1}}{\pi}\e^{\mathrm{i}x(\sin\tau_0-\tau_0\cos\tau_0)}\left[\frac{\Gamma(\frac{1}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{1}{2}}}+\left(\frac{1}{8}+\frac{5}{24}\cot^2\tau_0\right)\frac{\Gamma(\frac{3}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{3}{2}}}\right. \nonumber\\
+&&\left.+\left(\frac{3}{128}+\frac{7}{576}\cot^2\tau_0+\frac{385}{3456}\cot^4\tau_0\right)\frac{\Gamma(\frac{5}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{5}{2}}}+\cdots\right],
+\label{debye-formula: Bessel}
+\end{eqnarray}
+where $\tau_0$ is a saddle point and defined through
+\begin{equation}
+\tau_0=-\mathrm{i}\log\left(\frac{\alpha}{x}-\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right).
+\label{tau_0-2}
+\end{equation}
+\end{rem}
+
+\label{prep of proof 2}
+%\section{Estimations of quantities related to discrete Fourier coefficients}
+%\label{Estimations of quantities}
+\begin{lem}
+\label{LM1}
+Let $\psi(\theta)$ be a $2\pi$ periodic continuous function. Suppose that the derivative $\psi'(\theta)$ exists almost everywhere, and that it belongs to $L^2(0,2\pi)$. Let $\psi_n$ and ${\Psi}^{(N)}_n$ be the nth Fourier coefficient of $\psi$, and the nth discrete Fourier coefficients of $\psi$, respectively. Then the following equality holds.
+\begin{equation}
+{\Psi}^{(N)}_n-\psi_n=\sum _{p\in\Zset-\{0\}}\psi_{n+Np} \quad {\rm for}\; n \in \Zset.
+\label{Gn-gn}
+\end{equation}
+\end{lem}
+\begin{pf}
+The function $\psi(\theta)$ is expanded in the following uniformly absolutely convergent Fourier series:
+\begin{equation}
+\psi(\theta)=\sum^{\infty}_{n=-\infty}\psi_n \e^{\mathrm{i} n \theta}.
+\label{psi}
+\end{equation}
+The nth discrete Fourier coefficient of $\psi$ is given as follows.
+\begin{equation}
+{\Psi}^{(N)}_n=\frac{1}{N}\sum^{N-1}_{j=0}\psi(\theta_j)\e^{-\mathrm{i} n \theta_j}, \quad \theta_j=\frac{2\pi j}{N}, \quad n \in \Zset
+\label{Psi}
+\end{equation}
+Inserting (\ref{psi}) into the right-hand of (\ref{Psi}), we obtain (\ref{Gn-gn}).\qed
+\end{pf}
+
+\begin{prop}
+\label{eprop3}
+There exists a positive integer $L$, depending on $\kappa$ and $\gamma$, with the following property: If $N \ge L$, then
+\begin{eqnarray*}
+%\begin{array}{lll}
+\left|G^{(N)}_n-g_n\right| \le \displaystyle \frac{6}{N\pi}\left(\gamma^{N+|n|}+\gamma^{N-|n|}\right) \quad{\rm for}\; n \;{\rm with}\;  |n| \le N/2.
+%\end{array}
+\nonumber
+%\label{est-Gn-gn}
+\end{eqnarray*}
+\end{prop}
+\begin{pf}
+Fix a positive integer $L_1$ arbitrarily. Suppose that integers $N$, $n$ and $p$ satisfy
+\begin{displaymath}
+N \ge L_1, \quad |n| \le N/2, \quad p \ne 0.
+\end{displaymath}
+Then the following inequality holds.
+\begin{equation}
+|n+Np| \ge L_1/2.
+\label{n+Np}
+\end{equation}
+In fact we have
+\begin{displaymath}
+|n+Np| \ge |Np|-|n|\ge N-|n| \ge N-N/2=N/2 \ge L_1/2.
+\end{displaymath}
+Let $L_1/2$ equal to the integer $L$ determined in Proposition \ref{eprop2}. Then we have
+\begin{equation}
+|g_n| \le \frac{3\gamma^{|n|}}{2|n|\pi} \quad {\rm for}\;{\rm any}\; n \;{\rm with}\; |n| \ge L_1/2.
+\label{|gn|}
+\end{equation}
+Lemma \ref{LM1} yields the following inequality.
+\begin{displaymath}
+\left|G^{(N)}_n-g_n\right| \le \displaystyle \sum _{p \in \Zset-\{0\}} |g_{n+Np}|.
+\end{displaymath}
+If $N\ge L_1$ and $|n|\le N/2$, we can insert the estimate (\ref{|gn|}) into the right hand side of the above equality due to (\ref{n+Np}).
+Hence we obtain
+\begin{eqnarray}
+\begin{array}{ll}
+\left|G^{(N)}_n-g_n\right| \le \displaystyle \frac{3}{2\pi}\sum _{p \in \Zset-\{0\}} \frac{\gamma^{|n+Np|}}{|n+Np|} 
+\quad {\rm for}\;n\;{\rm with}\;|n| \le N/2
+\end{array}
+\label{Gn-gn <=}
+\end{eqnarray}
+provided that $N \ge L_1$. We note the following equality:
+\begin{eqnarray*}
+\begin{array}{ll}
+\displaystyle \frac{3}{2\pi}\sum _{p \in \Zset-\{0\}} \frac{\gamma^{|n+Np|}}{|n+Np|} 
+&= \displaystyle  \frac{3}{2\pi}\sum^{\infty}_{p=1}\left(\frac{\gamma^{Np+|n|}}{Np+|n|}+\frac{\gamma^{Np-|n|}}{Np-|n|}\right) \\
+ &\quad {\rm for}\;n\;{\rm with}\;|n| \le N/2.
+\end{array}
+\end{eqnarray*}
+Further we have
+\begin{displaymath}
+Np+|n| \ge Np-|n| \ge N - |n| \ge N - N/2 = N/2
+\end{displaymath}
+in the the right hand side of the equality above.
+Therefore we can calculate for $n$ with $|n|\le  N/2$ in the following way.
+\begin{eqnarray*}
+\sum^{\infty}_{p=1}\left(\frac{\gamma^{Np+|n|}}{Np+|n|}+\frac{\gamma^{Np-|n|}}{Np-|n|}\right) &\le& \frac{2}{N}\sum^{\infty}_{p=1}\left(\gamma^{Np+|n|}+\gamma^{Np-|n|}\right) \\
+&=& \frac{2(\gamma^{N+|n|}+\gamma^{N-|n|})}{N(1-\gamma^{N})}.
+\end{eqnarray*}
+We take a positive integer $L_2$ so as to satisfy
+\begin{displaymath}
+\frac{1}{1-\gamma^N} \le 2 \quad {\rm for}\;N \ge L_2.
+\end{displaymath}
+Let $L=\max(L_1,L_2)$. Then we have
+\begin{eqnarray*}
+\frac{2(\gamma^{N+|n|}+\gamma^{N-|n|})}{N(1-\gamma^{N})} &\le& \frac{4(\gamma^{N+|n|}+\gamma^{N-|n|})}{N} 
+\quad {\rm for}\;n\;{\rm with}\;|n| \le N/2
+\end{eqnarray*}
+provided that $N \ge L$. Summing up the above estimations starting from (\ref{Gn-gn <=}), we have the conclusion of Proposition \ref{eprop3}. It is to be noted that $L_1$ depends on $\kappa$ and $\gamma$, and that $L_2$ depends on $\gamma$.
+\qed
+\end{pf}
+
+\begin{cor}
+\label{eprop3b}
+Let $L$ be the positive integer determined in Proposition \ref{eprop3}. Then we have
+\begin{eqnarray*}
+\left|G^{(N)}_n-g_n\right| \le \displaystyle \frac{12}{N \pi}\gamma^{N/2}
+\quad {\rm for}\;n\;{\rm with}\; |n| \le N/2
+%\label{est-Fn-fn}
+\end{eqnarray*}
+provided that $N \ge L$. 
+\end{cor}
+\begin{pf}
+Since we have 
+\begin{displaymath}
+N+|n| \ge N-|n| \ge N-N/2=N/2 \quad {\rm for}\;n\;{\rm with}\;|n| \le N/2,
+\end{displaymath}
+Proposition \ref{eprop3} implies Corollary \ref{eprop3b}.\qed
+\end{pf}
+
+\begin{prop}
+\label{eprop3b2}
+Let $L$ be the positive integer determined in Proposition \ref{eprop3}. Then we have
+\begin{eqnarray*}
+\left|F^{(N)}_n-f_n\right| \le \displaystyle\frac{6}{N\pi}|||q|||\left(\gamma^{N+|n|}+\gamma^{N-|n|}\right) \quad {\rm for}\;n\;{\rm with}\; |n| \le N/2
+%\label{est-Fn-fn}
+\end{eqnarray*}
+provided that $N \ge L$. 
+\end{prop}
+\begin{cor}
+\label{eprop3b3}
+Let $L$ be the positive integer determined in Proposition \ref{eprop3}. Then we have
+\begin{eqnarray*}
+\left|F^{(N)}_n-f_n\right| \le \displaystyle \frac{12}{N \pi}|||q|||\gamma^{N/2} \quad {\rm for}\;n\;{\rm with}\; |n| \le N/2
+%\label{est-Fn-fn}
+\end{eqnarray*}
+provided that $N \ge L$. 
+\end{cor}
+\begin{pf}{Proof of Proposition \ref{eprop3b2} and Corollary \ref{eprop3b3}.} Due to Assumptions \ref{assump1} and \ref{assump2}, we have for any $n\in\Zset$
+\begin{displaymath}
+|f_n|\le |||q||| \, |g_n|.
+\end{displaymath}
+Proposition \ref{eprop2} yields 
+\begin{displaymath}
+|f_n| \le \frac{3|||q|||}{2\pi |n|}\gamma^{|n|} \quad {\rm for}\;n\;{\rm with}\;|n| \ge L,
+\end{displaymath}
+where $L$ is determined in Proposition \ref{eprop3}. The estimate above assures that the function $u(\bfvec{r})$ represented in the form (\ref{exactsol}) is the unique classical solution of the problem ${\rm (E_f)}$, and especially that $f(\theta)=u(\bfvec{a}(\theta))$ is a $2\pi$-periodic continuous function having the derivative $f'(\theta) \in L^2(0,2\pi)$. Hence Lemma \ref{LM1} yields
+\begin{displaymath}
+F^{(N)}_n-f_n=\sum_{p\in\Zset-\{0\}}f_{n+Np} \quad {\rm for}\;n\in\Zset.
+\end{displaymath}
+Therefore we have 
+\begin{displaymath}
+|F^{(N)}_n-f_n| \le \sum_{p\in\Zset-\{0\}}|f_{n+Np}| \le |||q||| \sum_{p\in\Zset-\{0\}}|g_{n+Np}|.
+\end{displaymath}
+Hence Proposition \ref{eprop3b2}, and Corollary \ref{eprop3b3}, are established through the same arguments as are employed in the proof of Proposition \ref{eprop3}, and that of Corollary \ref{eprop3b}, respectively.\qed
+\end{pf}
+
+\begin{prop}
+\label{eprop4}
+There exists a positive integer $L$ depending on $\kappa$ and $\gamma$ such that
+\begin{displaymath}
+\left|G^{(N)}_n\right| \ge \frac{\gamma^{N/2}}{2N\pi} \quad {\rm for}\; n \in \Zset \;{\rm provided}\;{\rm that}\; N \ge L.
+\end{displaymath}
+\end{prop}
+\begin{pf}
+%We use $N_i,0 \le i \le 4$, as temporary symbols in this proof. These symbols are distinguished to $N_1$ and $N_2$ that we have already defined previously.
+%
+Reduction of the proof of Proposition \ref{eprop4} to the proof of Theorem 3 in Ushijima and Chiba \cite{ushijima-chiba1} is as follows. Temporarily the integer $L$ determined in Proposition \ref{eprop2} is denoted by $L_{\ref{eprop2}}$, and integers $N_i,0 \le i \le 4$, are employed in accordance with those in the proof of Theorem 3 in \cite{ushijima-chiba1}. Let ${{N}}_1=L_{\ref{eprop2}}$ and let 
+\begin{displaymath}
+{{N}}_2=-\frac{\log 2}{\log\gamma}.
+\end{displaymath}
+Define
+\begin{displaymath}
+G_3=\min_{0\le n \le {{N}}_1}|g_n|.
+\end{displaymath}
+Due to Assumption \ref{assump1}, $G_3$ is positive. If
+\begin{displaymath}
+G_3 \le \frac{24}{\pi}\gamma^{1/2},
+\end{displaymath}
+then let
+\begin{displaymath}
+{{N}}_3=\frac{2}{\log\gamma} \times \log\frac{\pi G_3}{24},
+\end{displaymath}
+else let
+\begin{displaymath}
+{{N}}_3=1.
+\end{displaymath}
+Let ${{N}}_4$ be the largest zero of the following equation for the real variable $x$:
+\begin{displaymath}
+6x\gamma^{x/2}=\frac{1}{2}.
+\end{displaymath}
+Define
+\begin{displaymath}
+{{N}}_0=\max_{1\le i \le 4}{{N}}_i.
+\end{displaymath}
+In Step 3 of the proof of Theorem 3 in \cite{ushijima-chiba1}, we have shown that if $N \ge {{N}}_i$ for $1 \le i \le 3$, then
+\begin{displaymath}
+|G^{(N)}_n| \ge \frac{12}{\pi}\gamma^{N/2} \quad {\rm for}\;n\in[0,\frac{{{N}}_1}{2}].
+\end{displaymath}
+In Step 4 of the proof of Theorem 3 in \cite{ushijima-chiba1}, we have shown that if $N \ge {{N}}_i$ for $1 \le i \le 4$, then
+\begin{displaymath}
+|G^{(N)}_n| \ge \frac{\gamma^{N/2}}{2\pi N} \quad {\rm for}\;n\in[\frac{{{N}}_1}{2},\frac{N}{2}].
+\end{displaymath}
+Combining the above 2 estimates, and noticing the equality: $G^{(N)}_{-n}=G^{(N)}_n$ for any $n\in\Zset$, we have
+\begin{displaymath}
+|G^{(N)}_n| \ge \frac{\gamma^{N/2}}{2\pi N} \quad {\rm for}\;n\in[-\frac{N}{2},\frac{N}{2}]
+\end{displaymath}
+provided that $N \ge {{N}}_0$. Since the discrete Fourier coefficient $G^{(N)}_n$ has a period $N$ with respect to the suffix $n$, we have 
+\begin{displaymath}
+|G^{(N)}_n| \ge \frac{\gamma^{N/2}}{2\pi N} \quad {\rm for}\;n\in\Zset\;{\rm provided}\;{\rm that}\;N \ge {{N}}_0.
+\end{displaymath}
+For the positive integer $L$ nearest to ${{N}}_0$ from above, the statement of Proposition \ref{eprop4} is valid.\qed
+\end{pf}
+
+\begin{prop}
+\label{eprop5}
+Let $L_{\ref{eprop3}}$, and $L_{\ref{eprop4}}$ be positive integers determined in Proposition \ref{eprop3}, and in Proposition \ref{eprop4}, respectively. Let $L=\max(L_{\ref{eprop3}},L_{\ref{eprop4}})$. If $N \ge L$, then
+\begin{displaymath}
+\left|\frac{g_n}{G^{(N)}_n}\right| \le 25 \quad {\rm for}\;{\rm any}\;n\;{\rm with}\; |n| \le N/2.
+\nonumber
+%\label{<25}
+\end{displaymath}
+\end{prop}
+\begin{pf}
+Since
+\begin{displaymath}
+\left|\frac{g_n}{G^{(N)}_n}-1\right|=\left|\frac{g_n}{G^{(N)}_n}-\frac{G^{(N)}_n}{G^{(N)}_n}\right|=\left|\frac{1}{G^{(N)}_n}\right|\left|g_n-G^{(N)}_n\right|,
+\end{displaymath}
+Propositions \ref{eprop3} and \ref{eprop4} yield
+\begin{displaymath}
+\left|\frac{g_n}{G^{(N)}_n}-1\right| \le \frac{2N\pi}{\gamma^{N/2}}\times \frac{12}{N\pi}\gamma^{N/2}=24 \quad {\rm for}\;n\;{\rm with}\; |n| \le N/2
+\end{displaymath}
+if $N \ge L$. Hence we have
+\begin{eqnarray*}
+\begin{array}{lll}
+\displaystyle \left|\frac{g_n}{G^{(N)}_n}\right| \le \displaystyle\left|\frac{1}{G^{(N)}_n}\right|\left|g_n-G^{(N)}_n\right|+1 \le 24+1 =25 
+ \quad {\rm for}\;n\;{\rm with}\; |n| \le N/2
+\end{array}
+\end{eqnarray*}
+if $N \ge L$.\qed
+\end{pf}
+
+\begin{prop}
+\label{eprop6}
+Let $L$ be a positive integer determined in Proposition \ref{eprop5}. If $N \ge L$, then
+\begin{displaymath}
+\left|\frac{F^{(N)}_n}{G^{(N)}_n}\right| \le 49 |||q||| \quad {\rm for}\; n \in \Zset.
+%\label{<49q}
+\end{displaymath}
+\end{prop}
+\begin{pf}
+Discrete Fourier coefficients $F^{(N)}_n$ and $G^{(N)}_n$ have the period $N$ with respect to the suffix $n \in \Zset$. Then there exists an integer $m$ such that
+\begin{displaymath}
+|m| \le N/2 \quad {\rm and} \quad \frac{F^{(N)}_m}{G^{(N)}_m}=\frac{F^{(N)}_n}{G^{(N)}_n}.
+\end{displaymath}
+Further we have
+\begin{eqnarray*}
+\left|\frac{F^{(N)}_m}{G^{(N)}_m}-\frac{f_m}{g_m}\right| &=&  \left|\frac{F^{(N)}_m}{G^{(N)}_m}-\frac{f_m}{G^{(N)}_m}+\frac{f_m}{G^{(N)}_m}-\frac{f_m}{g_m}\right|  \\
+&=&  \left|\frac{1}{G^{(N)}_m}\right|\left|\left(F^{(N)}_m-f_m\right)+\frac{f_m}{g_m}\left(g_m-G^{(N)}_m\right)\right|  \\
+&\le&  \left|\frac{1}{G^{(N)}_m}\right|\left\{\left|F^{(N)}_m-f_m\right|+\left|\frac{f_m}{g_m}\right|\left|g_m-G^{(N)}_m\right|\right\} .
+\end{eqnarray*}
+Due to Corollary \ref{eprop3b3}, Assumption \ref{assump2} and Corollary \ref{eprop3b}, we have 
+\begin{eqnarray*}
+\displaystyle\left|\frac{F^{(N)}_n}{G^{(N)}_n}\right| &=& \displaystyle\left|\frac{F^{(N)}_m}{G^{(N)}_m}\right| \le  \displaystyle\left|\frac{1}{G^{(N)}_m}\right|\left\{\left|F^{(N)}_m-f_m\right|+\left|\frac{f_m}{g_m}\right|\left|g_m-G^{(N)}_m\right|\right\}+\left|\frac{f_m}{g_m}\right| \\
+&\le& \displaystyle 2N\pi \gamma^{-N/2} \times \left(  \frac{12 |||q|||}{N\pi}\gamma^{N/2} + |||q||| \times \frac{12}{N\pi}\gamma^{N/2} \right) + |||q||| \\
+&=& 49 |||q|||
+\end{eqnarray*}
+if $N \ge L$.\qed
+\end{pf}
+
+\section{Proof of the main theorem}
+\label{proof}
+The difference (\ref{difference}) is divided into terms $I$, $I\!I$ and $I\!I\!I$ in the following fashion:
+\begin{eqnarray}
+\label{diff2}
+\begin{array}{lll}
+\lefteqn{u(\bfvec{r})-u^{(N)}(\bfvec{r})} \\
+&=& \displaystyle \sum_{-N/2 \le n  \le N/2} I_n \frac{H^{(1)}_n(\kappa \delta)}{H^{(1)}_n(\kappa)} \e^{\mathrm{i} n \theta} + \sum_{n>N/2} {I\!I}_n \frac{H^{(1)}_n(\kappa \delta)}{H^{(1)}_n(\kappa)} \e^{\mathrm{i} n \theta} + \displaystyle \sum_{n<-N/2} {I\!I\!I}_n \frac{H^{(1)}_n(\kappa \delta)}{H^{(1)}_n(\kappa)} \e^{\mathrm{i} n \theta} \\
+&=& \displaystyle I + I\!I + I\!I\!I,
+\end{array}
+%\label{diff2}
+\end{eqnarray}
+where $I_n$, $I\!I_n$ and $I\!I\!I_n$ represent the quantities
+\begin{equation}
+\left(\frac{f_n}{g_n}-\frac{F^{(N)}_n}{G^{(N)}_n}\right)\,g_n
+\label{I,II,III}
+\end{equation}
+with integer $n$ running in the corresponding ranges specified to the terms $I$, $I\!I$ and $I\!I\!I$, respectively.
+
+\subsection{Estimation of the term $I$}
+\label{i}
+The term $I_n$ defined in (\ref{I,II,III}) in Section \ref{partition} is represented as follows.
+\begin{eqnarray*}
+I_n&=&\displaystyle \left(\frac{f_n}{g_n}-\frac{f_n}{G^{(N)}_n}+\frac{f_n}{G^{(N)}_n}-\frac{F^{(N)}_n}{G^{(N)}_n}\right)g_n \\
+&=&\displaystyle \left\{\frac{f_n}{g_n}\times\left(G^{(N)}_n-g_n\right)+\left(f_n-F^{(N)}_n\right)\right\}\times\frac{g_n}{G^{(N)}_n}\\
+&=&\left\{I^{(1)}_n\times I^{(2)}_n + I^{(3)}_n\right\}\times I^{(4)}_n.
+%\label{I1}
+\end{eqnarray*}
+
+By Assumption \ref{assump2} in Section \ref{main}, we have
+\begin{displaymath}
+|{I}^{(1)}_n|=\left|\frac{f_n}{g_n}\right|\le|||q|||.
+\end{displaymath}
+Denote the positive integer $L$ determined in Proposition \ref{eprop3} by $L_{\ref{eprop3}}$. Then we have
+\begin{eqnarray*}
+|I^{(2)}_n| = |G^{(N)}_n-g_n| \le \frac{6}{N\pi}\left(\gamma^{N+|n|}+\gamma^{N-|n|}\right) \quad
+ {\rm for}\;n\;{\rm with}\; |n| \le N/2
+\end{eqnarray*}
+if $N \ge L_{\ref{eprop3}}$.
+Due to Proposition \ref{eprop3b2}, we have
+\begin{eqnarray*}
+|I^{(3)}_n| = |F^{(N)}_n-f_n| \le \frac{6|||q|||}{N\pi}\left(\gamma^{N+|n|}+\gamma^{N-|n|}\right) 
+ \quad
+ {\rm for}\;n\;{\rm with}\; |n| \le N/2
+\end{eqnarray*}
+if $N \ge L_{\ref{eprop3}}$.
+Denote the positive integer $L$ determined in Proposition \ref{eprop5} by $L_{\ref{eprop5}}$. Then we have
+\begin{displaymath}
+|I^{(4)}_n| = \left|\frac{g_n}{G^{(N)}_n}\right|\le 25  \quad {\rm for}\;n\;{\rm with}\; |n| \le N/2
+\end{displaymath}
+if $N \ge L_{\ref{eprop5}}$.
+Let $N_I=\max(L_{\ref{eprop3}}, L_{\ref{eprop5}})$. Then the above 4 estimates yield the following estimate.
+\begin{eqnarray*}
+|I_n| \le (|I^{(1)}_n|\times |I^{(2)}_n| + |I^{(3)}_n|) \times |I^{(4)}_n| &\le& \displaystyle\frac{300|||q|||}{N\pi}\left(\gamma^{N+|n|}+\gamma^{N-|n|}\right) \\
+&& {\rm for}\;n\;{\rm with}\; |n| \le N/2
+\end{eqnarray*}
+if $N \ge N_I$.
+
+The summation of $\gamma^{N-|n|}+\gamma^{N+|n|}$ with respect to $n\in[-N/2,N/2]$ is estimated, in both cases of even $N$ and odd $N$, as follows.
+\begin{eqnarray*}
+\sum_{-N/2 \le n \le N/2}(\gamma^{N-|n|}+\gamma^{N+|n|}) < \frac{2\gamma^{N/2}}{1-\gamma}.
+\end{eqnarray*}
+Therefore we have
+\begin{displaymath}
+|I| \le \sum_{-N/2 \le n \le N/2}|I_n| < \frac{600|||q|||}{N\pi(1-\gamma)}\gamma^{N/2} \quad {\rm for}\;N \ge N_I.
+\end{displaymath}
+It should be noted that the definitions of $L_{\ref{eprop3}}$ and $L_{\ref{eprop5}}$ imply that $N_I$ depends on $\kappa$ and $\gamma$.\qed
+
+
+\subsection{Estimation of the term $I\!I$}
+\label{ii}
+The term ${I\!I}_n$ defined in (\ref{I,II,III}) of Section \ref{partition}
+is represented as follows.
+\begin{displaymath}
+{I\!I}_n =\left(\frac{f_n}{g_n}-\frac{F^{(N)}_n}{G^{(N)}_n}\right)\times g_n=\left({I\!I}^{(1)}_n-{I\!I}^{(2)}_n\right)\times {I\!I}^{(3)}_n.
+\end{displaymath}
+By Assumption \ref{assump2}, we have
+\begin{displaymath}
+|{I\!I}^{(1)}_n| = \left|\frac{f_n}{g_n}\right| \le |||q|||.
+\end{displaymath}
+Denote $L$ determined in Proposition \ref{eprop6} by $L_{\ref{eprop6}}$. Then we have
+\begin{displaymath}
+|{I\!I}^{(2)}_n| = \left|\frac{F^{(N)}_n}{G^{(N)}_n}\right| \le 49|||q||| \quad {\rm for}\;n > N/2
+\end{displaymath}
+if $N\ge L_{\ref{eprop6}}$.
+Denote $L$ determined in Proposition \ref{eprop2} by $L_{\ref{eprop2}}$. Then we have
+\begin{displaymath}
+|{I\!I}^{(3)}_n| =|g_n| \le \frac{3}{2 n \pi}\gamma^n \quad {\rm for}\; n > N/2
+\end{displaymath}
+if $N\ge L_{\ref{eprop2}}$.
+Let $N_{I\!I}=\max(L_{\ref{eprop6}}, L_{\ref{eprop2}})$. The above 3 estimates yield
+\begin{displaymath}
+|{I\!I}_n| \le \left({|I\!I}^{(1)}_n|+|{I\!I}^{(2)}_n|\right) \times |{I\!I}^{(3)}| \le \frac{75|||q|||}{\pi}\frac{\gamma^n}{n} \quad {\rm for}\; n > N/2
+\end{displaymath}
+if $N\ge N_{I\!I}$.
+The summation of $\gamma^n/n$ with respect to $n\in(N/2,\infty)$ is calculated as follows.
+\begin{displaymath}
+\sum_{n>N/2}\frac{\gamma^n}{n} < \sum_{n>N/2}\frac{\gamma^n}{N/2}=\frac{2}{N}\sum_{n>N/2}\gamma^n.
+\end{displaymath}
+Since we have, in both cases of even $N$ and odd $N$,
+\begin{displaymath}
+\sum_{n > N/2} \gamma^{n} \le \frac{\gamma^{N/2+1/2}}{1-\gamma},
+\end{displaymath}
+we obtain 
+\begin{displaymath}
+\sum_{n>N/2}\frac{\gamma^n}{n} < \frac{2\gamma^{N/2+1/2}}{N(1-\gamma)}.
+\end{displaymath}
+Therefore we have
+\begin{eqnarray*}
+|I\!I| \le \sum_{n>N/2}|{I\!I}_n| < \frac{75|||q|||}{\pi} \times \frac{2\gamma^{N/2+1/2}}{N(1-\gamma)} < \frac{150|||q|||}{N\pi(1-\gamma)}\gamma^{N/2} \;
+ {\rm for}\; N \ge N_{I\!I}.
+\end{eqnarray*}
+It should be noted that the definitions of $L_{\ref{eprop6}}$ and $L_{\ref{eprop2}}$ imply that $N_{I\!I}$ depends on $\kappa$ and $\gamma$.\qed
+
+\subsection{Estimation of the term $I\!I\!I$}
+\label{iii}
+In the same manner as in the previous subsection, we have
+\begin{displaymath}
+|I\!I\!I| \le \sum_{n<-N/2}|{I\!I\!I}_n| < \frac{150|||q|||}{N\pi(1-\gamma)}\gamma^{N/2} \quad {\rm for}\; N \ge N_{I\!I}.
+\end{displaymath}
+
+\subsection{Completion of the proof of the main theorem}
+Let $N_2 = \max(N_I,N_{I\!I})$. Then Subsections \ref{i}, \ref{ii} and \ref{iii} yield
+\begin{eqnarray*}
+\left|I+{I\!I}+{I\!I\!I}\right| &\le& \left|I\right|+\left|{I\!I}\right|+\left|{I\!I\!I}\right| \\
+&<& \displaystyle \frac{600|||q|||}{N\pi(1-\gamma)}\gamma^{N/2} + \frac{150|||q|||}{N\pi(1-\gamma)}\gamma^{N/2} \times 2 
+= \displaystyle \frac{900|||q|||}{\pi(1-\gamma)}\frac{\gamma^{N/2}}{N}
+\label{BL}
+\end{eqnarray*}
+if $N\ge N_2$.\qed
