@@ -69,7 +69,7 @@ $$
 $$
 
 $$
-\sim e^{-\alpha} \times (\frac{2\alpha}{x})^\alpha=(\frac{2\alpha}{\e x})^\alpha \quad {\rm as}\;\alpha\rightarrow\infty.
+\sim e^{-\alpha} \times (\frac{2\alpha}{x})^\alpha=(\frac{2\alpha}{e x})^\alpha \quad {\rm as}\;\alpha\rightarrow\infty.
 %\end{eqnarray*}
 $$
 
