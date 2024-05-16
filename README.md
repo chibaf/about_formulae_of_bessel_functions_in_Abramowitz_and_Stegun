@@ -61,11 +61,11 @@ e^{-\mathrm{i}x(\sin\tau_0-\tau_0\cos\tau_0)}
 $$
 
 $$
-=\exp\{-\alpha\sqrt{1-(\frac{x}{\alpha})^2}+\alpha\log(\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-(\frac{x}{\alpha}\right)^2})\} 
+=\exp\{-\alpha\sqrt{1-(\frac{x}{\alpha})^2}+\alpha\log(\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-(\frac{x}{\alpha})^2})\} 
 $$
 
 $$
-=\exp(-\alpha\sqrt{1-(\frac{x}{\alpha}\right)^2}) \times (\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha})^2})^\alpha
+=\exp(-\alpha\sqrt{1-(\frac{x}{\alpha})^2}) \times (\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha})^2})^\alpha
 $$
 
 $$
