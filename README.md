@@ -36,6 +36,8 @@ H^{(2)}_{\alpha}(x)&\sim&\frac{\mathrm{i}}{\pi}e^{-\mathrm{i}x(\sin\tau_0-\tau_0
 \end{eqnarray}
 $$
 
+where $\tau_0$ is a saddle point and defined through
+
 In this discussion, I use the fact: Bessel funcion is a real part of Hankel function and Neumann function imaginary part in real variable.
 
 ![1](https://github.com/chibaf/about_formulae_of_bessel_functions_in_Abramowitz_and_Stegun/assets/1296728/a0fcf3a3-e916-477b-81f4-2b1487ae3017)
