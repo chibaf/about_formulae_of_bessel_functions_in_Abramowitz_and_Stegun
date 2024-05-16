@@ -26,6 +26,8 @@ Naeherungsformen fuer Zylinderfunkutionen fuer grrosse werte des Arguments und m
 
 Refering Debye's paper, I showed formulae in Abramowitz_and_Stegun as follows.
 
+Using Debye's contour, Debye shows the following asymptotic expansions (\ref{debye-formula: Hankel}) and (\ref{debye-formula: Bessel}) of order $\alpha$ for $H^{(2)}_{\alpha}(x)$ and $J_\alpha(x)$ from their integral representations\cite{Debye},\cite{Olver1997},\cite{Watson1966}, where $\alpha>x>0$ and $H^{(2)}_{\alpha}(x)$ is the $\alpha$th order Hankel function of the second kind. Watson gives an explanation on Debye's contour in his book\cite{Watson1966}.
+
 In this discussion, I use the fact: Bessel funcion is a real part of Hankel function and Neumann function imaginary part in real variable.
 
 ![1](https://github.com/chibaf/about_formulae_of_bessel_functions_in_Abramowitz_and_Stegun/assets/1296728/a0fcf3a3-e916-477b-81f4-2b1487ae3017)
