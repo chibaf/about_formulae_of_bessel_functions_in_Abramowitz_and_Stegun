@@ -75,7 +75,7 @@ Then the first term of (\ref{debye-formula: Hankel}) is asymptotically equal to
 
 $$
 \begin{equation*}
-\mathrm{i}\sqrt{\frac{2}{\pi\alpha}}\left(\frac{2\alpha}{\e x}\right)^\alpha.
+\mathrm{i}\sqrt{\frac{2}{\pi\alpha}}\left(\frac{2\alpha}{e x}\right)^\alpha.
 \end{equation*}
 $$
 
@@ -83,7 +83,7 @@ Hence we have
 
 $$
 \begin{equation*}
-H^{(2)}_\alpha(x) \sim \mathrm{i}\sqrt{\frac{2}{\pi\alpha}}\left(\frac{2\alpha}{\e x}\right)^\alpha \quad {\rm as}\;\alpha\rightarrow\infty.
+H^{(2)}_\alpha(x) \sim \mathrm{i}\sqrt{\frac{2}{\pi\alpha}}\left(\frac{2\alpha}{e x}\right)^\alpha \quad {\rm as}\;\alpha\rightarrow\infty.
 \end{equation*}
 $$
 
