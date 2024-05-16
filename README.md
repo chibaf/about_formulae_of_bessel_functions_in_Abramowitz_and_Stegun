@@ -77,7 +77,7 @@ On the other hand, the following formulae hold for a fixed $x>0$.
 
 $$
 \begin{equation*}
-\Gamma\left(\frac{1}{2}\right)=\sqrt{\pi} \quad {\rm and} \quad \left(\mathrm{i}\frac{x}{2}\sin\tau_0\right)^{1/2} \sim \sqrt{\frac{\alpha}{2}}\quad {\rm as}\;\alpha\rightarrow\infty.
+\Gamma\left(\frac{1}{2}\right)=\sqrt{\pi} \quad {\rm and} \quad (\mathrm{i}\frac{x}{2}\sin\tau_0\right)^{1/2} \sim \sqrt{\frac{\alpha}{2}}\quad {\rm as}\;\alpha\rightarrow\infty.
 \end{equation*}
 $$
 
