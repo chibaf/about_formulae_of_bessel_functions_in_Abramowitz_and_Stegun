@@ -104,7 +104,7 @@ $$
 \tau_0=-\mathrm{i}\log\left(\frac{\alpha}{x}-\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right).
 % \label{tau_0-2}
 \end{equation}
-\end{rem}
+% \end{rem}
 $$
 
 In this discussion, I use the fact: Bessel funcion is a real part of Hankel function and Neumann function imaginary part in real variable.
