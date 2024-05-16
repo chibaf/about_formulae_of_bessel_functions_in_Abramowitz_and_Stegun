@@ -23,3 +23,9 @@ I found Debye's work concerned with these formulae in Iwanami sugaku jiten 4th e
 
 P. Debye, 
 Naeherungsformen fuer Zylinderfunkutionen fuer grrosse werte des Arguments und mbeschraenkt veraederliche werte des Index, Math Ann 67, 535--558 (1909)
+
+Refering Debye's paper, I showed formulae in Abramowitz_and_Stegun as follows
+
+![1](https://github.com/chibaf/about_formulae_of_bessel_functions_in_Abramowitz_and_Stegun/assets/1296728/a0fcf3a3-e916-477b-81f4-2b1487ae3017)
+
+![In the same manner as this discussion, from the following Dedge's formula(9) we have the](https://github.com/chibaf/about_formulae_of_bessel_functions_in_Abramowitz_and_Stegun/assets/1296728/fa01e087-0da4-474e-a987-b1c58731d04f)
