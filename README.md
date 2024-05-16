@@ -91,7 +91,7 @@ In the same manner as this discussion, from the following Debye's formula\cite{D
 
 $$
 \begin{eqnarray}
-J_{\alpha}(x)&\sim&\frac{\mathrm{1}}{\pi}\e^{\mathrm{i}x(\sin\tau_0-\tau_0\cos\tau_0)}\left[\frac{\Gamma(\frac{1}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{1}{2}}}+\left(\frac{1}{8}+\frac{5}{24}\cot^2\tau_0\right)\frac{\Gamma(\frac{3}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{3}{2}}}\right. \nonumber\\
+J_{\alpha}(x)&\sim&\frac{\mathrm{1}}{\pi} e^{\mathrm{i}x(\sin\tau_0-\tau_0\cos\tau_0)}\left[\frac{\Gamma(\frac{1}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{1}{2}}}+\left(\frac{1}{8}+\frac{5}{24}\cot^2\tau_0\right)\frac{\Gamma(\frac{3}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{3}{2}}}\right. \nonumber\\
 &&\left.+\left(\frac{3}{128}+\frac{7}{576}\cot^2\tau_0+\frac{385}{3456}\cot^4\tau_0\right)\frac{\Gamma(\frac{5}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{5}{2}}}+\cdots\right],
 % \label{debye-formula: Bessel}
 \end{eqnarray}
