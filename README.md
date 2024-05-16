@@ -32,7 +32,7 @@ $$
 \begin{eqnarray*}
 H^{(2)}_{\alpha}(x)&\sim&\frac{\mathrm{i}}{\pi}e^{-\mathrm{i}x(\sin\tau_0-\tau_0\cos\tau_0)}\left[\frac{\Gamma(\frac{1}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{1}{2}}}-\left(\frac{1}{8}+\frac{5}{24}\cot^2\tau_0\right)\frac{\Gamma(\frac{3}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{3}{2}}}\right. \nonumber\\
 &&\left.+\left(\frac{3}{128}+\frac{7}{576}\cot^2\tau_0+\frac{385}{3456}\cot^4\tau_0\right)\frac{\Gamma(\frac{5}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{5}{2}}}+\cdots\right],
-// \label{debye-formula: Hankel}
+% \label{debye-formula: Hankel}
 \end{eqnarray*}
 $$
 
@@ -41,7 +41,7 @@ where $\tau_0$ is a saddle point and defined through
 $$
 \begin{equation}
 \tau_0=-\mathrm{i}\log\left(\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right).
-\label{tau_0}
+% \label{tau_0}
 \end{equation}
 $$
 
@@ -93,7 +93,7 @@ $$
 \begin{eqnarray}
 J_{\alpha}(x)&\sim&\frac{\mathrm{1}}{\pi}\e^{\mathrm{i}x(\sin\tau_0-\tau_0\cos\tau_0)}\left[\frac{\Gamma(\frac{1}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{1}{2}}}+\left(\frac{1}{8}+\frac{5}{24}\cot^2\tau_0\right)\frac{\Gamma(\frac{3}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{3}{2}}}\right. \nonumber\\
 &&\left.+\left(\frac{3}{128}+\frac{7}{576}\cot^2\tau_0+\frac{385}{3456}\cot^4\tau_0\right)\frac{\Gamma(\frac{5}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{5}{2}}}+\cdots\right],
-\label{debye-formula: Bessel}
+% \label{debye-formula: Bessel}
 \end{eqnarray}
 $$
 
@@ -102,7 +102,7 @@ where $\tau_0$ is a saddle point and defined through
 $$
 \begin{equation}
 \tau_0=-\mathrm{i}\log\left(\frac{\alpha}{x}-\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right).
-\label{tau_0-2}
+% \label{tau_0-2}
 \end{equation}
 \end{rem}
 $$
