@@ -48,9 +48,9 @@ $$
 Since
 
 $$
-\begin{displaymath}
+\begin{equation*}
 \cos\tau_0=\frac{\alpha}{x}, \quad \sin\tau_0=-\mathrm{i}\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2},
-\end{displaymath}
+\end{equation*}
 $$
 
 we have for a fixed $x>0$
@@ -66,25 +66,25 @@ $$
 On the other hand, the following formulae hold for a fixed $x>0$.
 
 $$
-\begin{displaymath}
+\begin{equation*}
 \Gamma\left(\frac{1}{2}\right)=\sqrt{\pi} \quad {\rm and} \quad \left(\mathrm{i}\frac{x}{2}\sin\tau_0\right)^{1/2} \sim \sqrt{\frac{\alpha}{2}}\quad {\rm as}\;\alpha\rightarrow\infty.
-\end{displaymath}
+\end{equation*}
 $$
 
 Then the first term of (\ref{debye-formula: Hankel}) is asymptotically equal to
 
 $$
-\begin{displaymath}
+\begin{equation*}
 \mathrm{i}\sqrt{\frac{2}{\pi\alpha}}\left(\frac{2\alpha}{\e x}\right)^\alpha.
-\end{displaymath}
+\end{equation*}
 $$
 
 Hence we have
 
 $$
-\begin{displaymath}
+\begin{equation*}
 H^{(2)}_\alpha(x) \sim \mathrm{i}\sqrt{\frac{2}{\pi\alpha}}\left(\frac{2\alpha}{\e x}\right)^\alpha \quad {\rm as}\;\alpha\rightarrow\infty.
-\end{displaymath}
+\end{equation*}
 $$
 
 In the same manner as this discussion, from the following Debye's formula\cite{Debye} we have the asymptotic expansion of $J_\alpha(x)$ for a fixed positive number $x$ as $\alpha\rightarrow\infty$.
