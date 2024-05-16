@@ -1,7 +1,7 @@
 # about_formulae_of_bessel_functions_in_Abramowitz_and_Stegun
 about_formulae_of_bessel_functions_in_Abramowitz_and_Stegun
 
-Abramowitz_and_Stegun shows the following formulae
+Abramowitz_and_Stegun shows the following formulae for large $\nu$
 
 asymptotic expansions for bessel functions by order
 
@@ -12,5 +12,5 @@ $$
 asymptotic expansions for neumann functions by order
 
 $$
-Y_{\nu}(z) \sim -\sqrt{\frac{2}{\pi\nu}}\left(\frac{ez}{2\nu}\right)^{-\nu}\left[1+O(\nu^{-1})\right], \quad \nu\rightarrow+\infty
+Y_{\nu}(z) \sim -\sqrt{\frac{2}{\pi\nu}}\left(\frac{ez}{2\nu}\right)^{-\nu}\left[1+O(\nu^{-1})\right], \quad |{\rm arg}\, \nu|<\pi
 $$
