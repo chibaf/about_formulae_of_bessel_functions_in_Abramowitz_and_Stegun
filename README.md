@@ -65,11 +65,11 @@ $$
 $$
 
 $$
-=\exp(-\alpha\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right) \times \left(\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2})^\alpha
+=\exp(-\alpha\sqrt{1-(\frac{x}{\alpha}\right)^2}) \times (\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha})^2})^\alpha
 $$
 
 $$
-\sim e^{-\alpha} \times \left(\frac{2\alpha}{x}\right)^\alpha=\left(\frac{2\alpha}{\e x}\right)^\alpha \quad {\rm as}\;\alpha\rightarrow\infty.
+\sim e^{-\alpha} \times (\frac{2\alpha}{x})^\alpha=(\frac{2\alpha}{\e x})^\alpha \quad {\rm as}\;\alpha\rightarrow\infty.
 %\end{eqnarray*}
 $$
 
