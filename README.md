@@ -51,8 +51,8 @@ $$
 \begin{displaymath}
 \cos\tau_0=\frac{\alpha}{x}, \quad \sin\tau_0=-\mathrm{i}\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2},
 \end{displaymath}
-
 $$
+
 we have for a fixed $x>0$
 
 $$
