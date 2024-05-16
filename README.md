@@ -108,7 +108,3 @@ $$
 $$
 
 In this discussion, I use the fact: Bessel funcion is a real part of Hankel function and Neumann function imaginary part in real variable.
-
-![1](https://github.com/chibaf/about_formulae_of_bessel_functions_in_Abramowitz_and_Stegun/assets/1296728/a0fcf3a3-e916-477b-81f4-2b1487ae3017)
-
-![In the same manner as this discussion, from the following Dedge's formula(9) we have the](https://github.com/chibaf/about_formulae_of_bessel_functions_in_Abramowitz_and_Stegun/assets/1296728/fa01e087-0da4-474e-a987-b1c58731d04f)
