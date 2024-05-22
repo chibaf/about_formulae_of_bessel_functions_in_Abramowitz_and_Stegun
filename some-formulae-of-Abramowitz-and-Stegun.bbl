@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{Abramowitz-Stegun}
+{\sc Abramowitz, M., and Stegun, I.~A.}
+\newblock {\em Handbook of Mathematical Functions, with Formulas, Graphs, and
+  Mathematical Tables}, ninth printing~ed.
+\newblock Dover Publications, New York, 1972.
+
+\bibitem{Debye}
+{\sc Debye, P.}
+\newblock {N{\"a}hrungsformeln f{\"u}r die Zylinderfunktionen f{\"u}r gro§e
+  Werte des Arguments und unbeschr{\"a}nkt ver{\"a}nderliche Werte des Index}.
+\newblock {\em Math. Ann. I.XVII\/} (1909), 535--558.
+
+\bibitem{Olver1997}
+{\sc Olver, F. W.~J.}
+\newblock {\em Asymptotics and Special Functions}.
+\newblock AKP Classics. A K Peters, Ltd., Wellesley, Massachusetts, 1996.
+
+\bibitem{Watson1966}
+{\sc Watson, G.~N.}
+\newblock {\em A Treatise on the Theory of Bessel Functions}, second~ed.
+\newblock Cambridge University Press, Cambridge, 1966.
+
+\end{thebibliography}

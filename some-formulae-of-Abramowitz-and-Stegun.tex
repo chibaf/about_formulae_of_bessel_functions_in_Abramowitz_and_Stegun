@@ -1,0 +1,80 @@
+\documentclass[12pt]{report}
+
+\input{./setting.tex}
+
+\begin{document}
+\bibliographystyle{acm}
+%\bibliographystyle{acm}
+
+\title{some Bessel asymptotic formulae of Abramowitz and Stegun}
+\author{CHIBA, Fumihiro}
+%------------------------
+\maketitle
+%\abstract{
+%%
+%}
+
+%\begin{rem}
+In Abramowitz and Stegun\cite{Abramowitz-Stegun}, the following formulae have no reference.
+$$
+J_\nu(z) \sim \sqrt{\frac{1}{2\pi\nu}}\left(\frac{ez}{2\nu}\right)^\nu\left[1+O(\nu^{-1})\right], \quad |{\rm arg}\, \nu|<\pi
+$$
+$$
+Y_{\nu}(z) \sim -\sqrt{\frac{2}{\pi\nu}}\left(\frac{ez}{2\nu}\right)^{-\nu}\left[1+O(\nu^{-1})\right], \quad |{\rm arg}\, \nu|<\pi.
+$$
+
+\label{Debye formula}
+Using Debye's contour, Debye shows the following asymptotic expansions (\ref{debye-formula: Hankel}) and (\ref{debye-formula: Bessel}) of order $\alpha$ for $H^{(2)}_{\alpha}(x)$ and $J_\alpha(x)$ from their integral representations\cite{Debye},\cite{Olver1997},\cite{Watson1966}, where $\alpha>x>0$ and $H^{(2)}_{\alpha}(x)$ is the $\alpha$th order Hankel function of the second kind. Watson gives an explanation on Debye's contour in his book\cite{Watson1966}.
+\begin{eqnarray}
+H^{(2)}_{\alpha}(x)&\sim&\frac{\mathrm{i}}{\pi}\e^{-\mathrm{i}x(\sin\tau_0-\tau_0\cos\tau_0)}\left[\frac{\Gamma(\frac{1}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{1}{2}}}-\left(\frac{1}{8}+\frac{5}{24}\cot^2\tau_0\right)\frac{\Gamma(\frac{3}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{3}{2}}}\right. \nonumber\\
+&&\left.+\left(\frac{3}{128}+\frac{7}{576}\cot^2\tau_0+\frac{385}{3456}\cot^4\tau_0\right)\frac{\Gamma(\frac{5}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{5}{2}}}+\cdots\right],
+\label{debye-formula: Hankel}
+\end{eqnarray}
+where $\tau_0$ is a saddle point and defined through
+\begin{equation}
+\tau_0=-\mathrm{i}\log\left(\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right).
+\label{tau_0}
+\end{equation}
+Since 
+\begin{displaymath}
+\cos\tau_0=\frac{\alpha}{x}, \quad \sin\tau_0=-\mathrm{i}\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2},
+\end{displaymath}
+we have for a fixed $x>0$
+\begin{eqnarray*}
+\e^{-\mathrm{i}x(\sin\tau_0-\tau_0\cos\tau_0)}&=&\exp\left\{-\alpha\sqrt{1-\left(\frac{x}{\alpha}\right)^2}+\alpha\log\left(\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right)\right\} \\
+&=&\exp\left(-\alpha\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right) \times \left(\frac{\alpha}{x}+\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right)^\alpha \\
+&\sim& \e^{-\alpha} \times \left(\frac{2\alpha}{x}\right)^\alpha=\left(\frac{2\alpha}{\e x}\right)^\alpha \quad {\rm as}\;\alpha\rightarrow\infty.
+\end{eqnarray*}
+On the other hand, the following formulae hold for a fixed $x>0$.
+\begin{displaymath}
+\Gamma\left(\frac{1}{2}\right)=\sqrt{\pi} \quad {\rm and} \quad \left(\mathrm{i}\frac{x}{2}\sin\tau_0\right)^{1/2} \sim \sqrt{\frac{\alpha}{2}}\quad {\rm as}\;\alpha\rightarrow\infty.
+\end{displaymath}
+Then the first term of (\ref{debye-formula: Hankel}) is asymptotically equal to
+\begin{displaymath}
+\mathrm{i}\sqrt{\frac{2}{\pi\alpha}}\left(\frac{2\alpha}{\e x}\right)^\alpha.
+\end{displaymath}
+Hence we have
+\begin{displaymath}
+H^{(2)}_\alpha(x) \sim \mathrm{i}\sqrt{\frac{2}{\pi\alpha}}\left(\frac{2\alpha}{\e x}\right)^\alpha \quad {\rm as}\;\alpha\rightarrow\infty.
+\end{displaymath}
+
+In the same manner as this discussion, from the following Debye's formula\cite{Debye} we have the asymptotic expansion of $J_\alpha(x)$ for a fixed positive number $x$ as $\alpha\rightarrow\infty$.
+\begin{eqnarray}
+J_{\alpha}(x)&\sim&\frac{\mathrm{1}}{\pi}\e^{\mathrm{i}x(\sin\tau_0-\tau_0\cos\tau_0)}\left[\frac{\Gamma(\frac{1}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{1}{2}}}+\left(\frac{1}{8}+\frac{5}{24}\cot^2\tau_0\right)\frac{\Gamma(\frac{3}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{3}{2}}}\right. \nonumber\\
+&&\left.+\left(\frac{3}{128}+\frac{7}{576}\cot^2\tau_0+\frac{385}{3456}\cot^4\tau_0\right)\frac{\Gamma(\frac{5}{2})}{(\mathrm{i}\frac{x}{2}\sin\tau_0)^{\frac{5}{2}}}+\cdots\right],
+\label{debye-formula: Bessel}
+\end{eqnarray}
+where $\tau_0$ is a saddle point and defined through
+\begin{equation}
+\tau_0=-\mathrm{i}\log\left(\frac{\alpha}{x}-\frac{\alpha}{x}\sqrt{1-\left(\frac{x}{\alpha}\right)^2}\right).
+\label{tau_0-2}
+\end{equation}
+%\end{rem}
+
+\cleardoublepage
+\addcontentsline{toc}{chapter}{Bibliography}
+\bibliography{biblio-2008}
+
+
+\end{document}
+
